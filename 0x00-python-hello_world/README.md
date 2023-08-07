@@ -63,5 +63,5 @@ Below are the function prototypes for the functions written in this project:
 14. **ByteCode -> Python #1**
     - [102-magic_calculation.py](./103-magic_calculation.py): A Python function that matches a given bytecode, provided by ALX.
 
-Please write in the English language.
+
 
