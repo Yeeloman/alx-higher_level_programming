@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	struct listint_s *slow = list;
 	struct listint_s *fast = list;
 
-	while (fast != NULL && fast->next != NULL)
+	while (fast && fast->next)
 	{
 		slow = slow->next;
 		fast = fast->next->next;
