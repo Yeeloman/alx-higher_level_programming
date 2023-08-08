@@ -1,4 +1,9 @@
-#!/usr/bin/python3
+#!/usr/#!/usr/bin/env python3
+fizzbuzz = __import__('12-fizzbuzz').fizzbuzz
+
+fizzbuzz()
+print("")
+bin/python3
 def fizzbuzz():
     for i in range(1, 101):
         if (i % 5 == 0) and (i % 3 == 0):
