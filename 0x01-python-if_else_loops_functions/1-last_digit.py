@@ -5,8 +5,6 @@ if number < 0:
     rem = number % -10
 else:
     rem = number % 10
-if rem < 0:
-    rem = rem * (-1)
 if rem > 5:
     comment = "and is greater than 5"
 elif rem == 0:
