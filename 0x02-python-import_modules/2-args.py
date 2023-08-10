@@ -5,6 +5,9 @@ if __name__ == "__main__":
     if _len == 0:
         print("0 arguments.")
     else:
-        print("{} arguments:".format(_len))
+        if _len == 1:
+            print("{} argument:".format(_len))
+        else:
+            print("{} arguments:".format(_len))
         for i in range(1, _len + 1):
             print("{}: {}".format(i, sys.argv[i]))
