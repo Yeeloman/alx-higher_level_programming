@@ -12,7 +12,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *list = *head;
 	int i = 0, start, end;
-	int *palind = NULL;
+	int palind[10000];
 
 	if ((!*head) || (!head) || !list->next)
 		return (1);
@@ -21,9 +21,6 @@ int is_palindrome(listint_t **head)
 		list = list->next;
 		i++;
 	}
-	palind = (int *)malloc(i * sizeof(int));
-	if (palind == NULL)
-		return (0);
 	list = *head;
 	i = 0;
 	while (list)
@@ -35,11 +32,8 @@ int is_palindrome(listint_t **head)
 	for (start = 0, end = i - 1; start < end; start++, end--)
 	{
 		if (palind[start] != palind[end])
-		{
-			free(palind);
-			return (0);
-		}
+		return (0);
 	}
-	free(palind);
 	return (1);
 }
+
