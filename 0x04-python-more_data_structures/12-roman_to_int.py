@@ -12,4 +12,4 @@ def roman_to_int(roman_string):
         else:
             decimal_value -= value
         prev_value = value
-    return decimal_value
+    return int(decimal_value)
