@@ -74,7 +74,7 @@ void print_python_list(PyObject *p)
 
 	setbuf(stdout, NULL);
 	printf("[*] Python list info\n");
-	if (!PyBytes_Check(p))
+	if (!PyList_CheckExact(p))
 	{
 		printf("  [ERROR] Invalid List Object\n");
 		return;
