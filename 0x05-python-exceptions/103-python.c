@@ -38,39 +38,29 @@ void print_python_bytes(PyObject *p)
 }
 
 /**
- * print_python_float - prints python float
- * @p: pointer to the python float
+ *print_python_float - prints python float
+ *@p: pointer to the python float
  */
 
 void print_python_float(PyObject *p)
 {
 	float value;
-	char buffer[50];
-	int result;
+	char *ptr;
 
 	setbuf(stdout, NULL);
 	printf("[.] float object info\n");
-
 	if (!PyBytes_Check(p))
 	{
 		printf("  [ERROR] Invalid Bytes Object\n");
 		setbuf(stdout, NULL);
 		return;
 	}
-
 	value = ((PyFloatObject *)(p))->ob_fval;
-	result = snprintf(buffer, sizeof(buffer), "%.*g", 17, value);
-
-	if (result >= 0 && result < sizeof(buffer))
-	{
-		printf("  value: %s\n", buffer);
-	}
-	else
-{
-		printf("  Error: Unable to format float value.\n");
-	}
+	ptr = PyOS_double_to_string(value, 'r', 0, Py_DTSF_ADD_DOT_0, Py_DTST_FINITE);
+	printf("  value: %s\n", ptr);
 	setbuf(stdout, NULL);
 }
+
 /**
  *print_python_list - prints python list
  *@p: pointer to the python list
