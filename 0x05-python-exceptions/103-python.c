@@ -75,8 +75,6 @@ void print_python_list(PyObject *p)
 	long int size;
 	int i = 0;
 
-	size = ((PyVarObject *)(p))->ob_size;
-	list = (PyListObject *)p;
 	setbuf(stdout, NULL);
 	printf("[*] Python list info\n");
 	if (!PyBytes_Check(p))
@@ -85,6 +83,8 @@ void print_python_list(PyObject *p)
 		setbuf(stdout, NULL);
 		return;
 	}
+  size = ((PyVarObject *)(p))->ob_size;
+  list = (PyListObject *)p;
 	printf("[*] Size of the Python List = %ld\n", size);
 	printf("[*] Allocated = %ld\n", list->allocated);
 	for (; i < size; i++)
