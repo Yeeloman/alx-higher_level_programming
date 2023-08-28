@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <Python.h>
+#include <object.h>
 
 /**
  *print_python_bytes - prints python bytes
@@ -50,7 +51,7 @@ void print_python_float(PyObject *p)
 
 	setbuf(stdout, NULL);
 	printf("[.] float object info\n");
-	if (!PyBytes_Check(p))
+	if (!PyFloat_Check(p))
 	{
 		printf("  [ERROR] Invalid Float Object\n");
 		setbuf(stdout, NULL);
