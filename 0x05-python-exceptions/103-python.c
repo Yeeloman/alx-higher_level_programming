@@ -2,6 +2,7 @@
 #include <time.h>
 #include <Python.h>
 #include <object.h>
+#include <floatobject.h>
 
 /**
  *print_python_bytes - prints python bytes
@@ -46,7 +47,7 @@ void print_python_bytes(PyObject *p)
 
 void print_python_float(PyObject *p)
 {
-	float value;
+	double value;
 	char *ptr;
 
 	setbuf(stdout, NULL);
