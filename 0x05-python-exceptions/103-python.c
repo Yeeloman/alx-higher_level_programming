@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 #include <Python.h>
 
 /**
@@ -51,7 +52,7 @@ void print_python_float(PyObject *p)
 	printf("[.] float object info\n");
 	if (!PyBytes_Check(p))
 	{
-		printf("  [ERROR] Invalid Bytes Object\n");
+		printf("  [ERROR] Invalid Float Object\n");
 		setbuf(stdout, NULL);
 		return;
 	}
@@ -79,7 +80,7 @@ void print_python_list(PyObject *p)
 	printf("[*] Python list info\n");
 	if (!PyBytes_Check(p))
 	{
-		printf("  [ERROR] Invalid Bytes Object\n");
+		printf("  [ERROR] Invalid List Object\n");
 		setbuf(stdout, NULL);
 		return;
 	}
@@ -97,7 +98,3 @@ void print_python_list(PyObject *p)
 	}
 	setbuf(stdout, NULL);
 }
-
-
-
-
