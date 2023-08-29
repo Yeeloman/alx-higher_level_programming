@@ -52,9 +52,11 @@ class Square:
         Args:
             value (int): square position.
         """
-        if type(value) != tuple or len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if any(type(i) != int for i in value) or any(j < 0 for j in value):
+        a = not isinstance(value, int)
+        b = len(value) != 2
+        c = not all(isinstance(num, int) for num in value)
+        d = not all(num >= 0 for num in value)
+        if a or b or c or d:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
@@ -68,8 +70,13 @@ class Square:
     def my_print(self):
         """prints in stdout the square with #"""
         if self.__size == 0:
-            print("")
+            print()
         else:
-            [print("") for i in range(self.__position[1])]
-            sqr_pattern = " " * self.__position[0] + "#" * self.__size + "\n"
-            print(sqr_pattern * self.__size, end="")
+            for y in range(self.__position[1]):
+                print()
+            for i in range(self.__size):
+                for x in range(self.__position[0]):
+                    print(' ', end='')
+                for j in range(self.__size):
+                    print('#', end='')
+                print()
