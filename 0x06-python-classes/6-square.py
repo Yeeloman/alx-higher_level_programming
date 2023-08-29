@@ -29,11 +29,12 @@ class Square:
     Args:
     value (int): square size.
     """
-        self.__size = value
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
 
     @property
     def position(self):
@@ -71,6 +72,7 @@ class Square:
         if self.__size == 0:
             print("")
         else:
-            [print("") for i in range(self.__position[1])]
+            for y in range(self.__position[1]):
+                print()
             sqr_pattern = " " * self.__position[0] + "#" * self.__size + "\n"
             print(sqr_pattern * self.__size, end="")
