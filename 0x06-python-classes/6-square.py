@@ -38,11 +38,7 @@ class Square:
         Args:
             value (int): square size.
         """
-        a = not isinstance(value, int)
-        b = len(value) != 2
-        c = not all(isinstance(num, int) for num in value)
-        d = not all(num >= 0 for num in value)
-        if a or b or c or d:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -56,8 +52,13 @@ class Square:
         Args:
             value (int): square position.
         """
-        if not isinstance(value, tuple):
+        a = not isinstance(value, int)
+        b = len(value) != 2
+        c = not all(isinstance(num, int) for num in value)
+        d = not all(num >= 0 for num in value)
+        if a or b or c or d:
             raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
 
     def area(self):
         """calc area
@@ -71,8 +72,6 @@ class Square:
         if self.__size == 0:
             print("")
         else:
-            [print("") for a in range(0, self.__position[1])]
-            for b in range(0, self.__size):
-                [print(" ", end="") for c in range(0, self.__position[0])]
-                [print("#", end="") for d in range(0, self.__size)]
-                print("")
+            [print("") for i in range(self.__position[1])]
+            sqr_pattern = " " * self.__position[0] + "#" * self.__size + "\n"
+            print(sqr_pattern * self.__size, end="")
