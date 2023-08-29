@@ -60,7 +60,8 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif any(num <= 0 for num in value):
             raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
+        else:
+            self.__position = value
 
     def area(self):
         """calc area
@@ -74,7 +75,8 @@ class Square:
         if self.__size == 0:
             print("")
         else:
-            for y in range(self.__position[1]):
-                print()
-            sqr_pattern = " " * self.__position[0] + "#" * self.__size + "\n"
-            print(sqr_pattern * self.__size, end="")
+            [print("") for i in range(0, self.__position[1])]
+            for i in range(0, self.__size):
+                [print(" ", end="") for j in range(0, self.__position[0])]
+                [print("#", end="") for k in range(0, self.__size)]
+                print("")
