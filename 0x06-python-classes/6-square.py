@@ -10,8 +10,8 @@ class Square:
             size (int): square size.
             position (int, int): The position of the new square.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -26,9 +26,9 @@ class Square:
     def size(self, value):
         """Sets value into size, must be int.
 
-    Args:
-    value (int): square size.
-    """
+        Args:
+        value (int): square size.
+        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:

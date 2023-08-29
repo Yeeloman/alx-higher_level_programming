@@ -31,6 +31,7 @@ class Square:
             TypeError: if not int.
             ValueError: if not positive.
         """
+        print("mok")
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
