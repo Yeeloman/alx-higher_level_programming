@@ -10,8 +10,8 @@ class Square:
             size (int): square size.
             position (int, int): The position of the new square.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
@@ -22,6 +22,19 @@ class Square:
         """
         return self.__size
 
+    @size.setter
+    def size(self, value):
+        """Sets value into size, must be int.
+
+    Args:
+    value (int): square size.
+    """
+        self.__size = value
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+
     @property
     def position(self):
         """Sets value of position.
@@ -30,20 +43,6 @@ class Square:
             value (int): square position.
         """
         return self.__position
-
-    @size.setter
-    def size(self, value):
-        """Sets value into size, must be int.
-
-        Args:
-            value (int): square size.
-        """
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        elif value < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
 
     @position.setter
     def position(self, value):
@@ -70,13 +69,8 @@ class Square:
     def my_print(self):
         """prints in stdout the square with #"""
         if self.__size == 0:
-            print()
+            print("")
         else:
-            for y in range(self.__position[1]):
-                print()
-            for i in range(self.__size):
-                for x in range(self.__position[0]):
-                    print(' ', end='')
-                for j in range(self.__size):
-                    print('#', end='')
-                print()
+            [print("") for i in range(self.__position[1])]
+            sqr_pattern = " " * self.__position[0] + "#" * self.__size + "\n"
+            print(sqr_pattern * self.__size, end="")
