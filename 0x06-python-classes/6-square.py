@@ -52,11 +52,10 @@ class Square:
         Args:
             value (int): square position.
         """
-        a = not isinstance(value, int)
-        b = len(value) != 2
-        c = not all(isinstance(num, int) for num in value)
-        d = not all(num >= 0 for num in value)
-        if a or b or c or d:
+        a = not isinstance(value, tuple)
+        b = len(value) != 2 or not all(isinstance(num, int) for num in value)
+        c = not all(num >= 0 for num in value)
+        if a or b or c:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
