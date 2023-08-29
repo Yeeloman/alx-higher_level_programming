@@ -13,10 +13,10 @@ class Square:
 
     @property
     def size(self):
-        """int: private size.
+        """get value attribute.
 
         Returns:
-            Private size.
+            int: the attribute value.
         """
         return self.__size
 
@@ -26,6 +26,10 @@ class Square:
 
         Args:
             value (int): square size.
+
+        Raises:
+            TypeError: if not int.
+            ValueError: if not positive.
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
