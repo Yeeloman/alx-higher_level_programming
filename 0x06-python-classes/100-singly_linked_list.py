@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 class Node:
+    """class Node"""
     def __init__(self, data, next_node=None):
         """
         Initialize a Node instance.
@@ -64,6 +65,7 @@ class Node:
 
 
 class SinglyLinkedList:
+    """SinglyLinkedList"""
     def __init__(self):
         """
         Initialize a SinglyLinkedList instance.
