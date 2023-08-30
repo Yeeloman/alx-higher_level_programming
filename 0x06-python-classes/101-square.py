@@ -84,8 +84,9 @@ class Square:
         """printable square"""
         if self.__size == 0:
             return ""
-        space_string = ""
-        for space in range(self.__position[1]):
-            space_string = space_string + "\n"
-        sqr_string = " " * self.__position[0] + "#" * self.__size + "\n"
-        return sqr_string * self.__size
+        else:
+            for y in range(self.__position[1]):
+                print()
+            sqr_pattern = " " * self.__position[0] + "#" * self.__size + "\n"
+            print(sqr_pattern * self.__size, end="")
+        return ""
