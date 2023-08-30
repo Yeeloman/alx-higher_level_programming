@@ -81,12 +81,12 @@ class Square:
             print(sqr_pattern * self.__size, end="")
 
     def __str__(self):
-        """printable square"""
-        if self.__size == 0:
-            return ""
-        else:
-            for y in range(self.__position[1]):
-                print()
-            sqr_pattern = " " * self.__position[0] + "#" * self.__size + "\n"
-            print(sqr_pattern * self.__size, end="")
-        return ""
+        """Define the print() representation of a Square."""
+        if self.__size != 0:
+            [print("") for i in range(0, self.__position[1])]
+        for i in range(0, self.__size):
+            [print(" ", end="") for j in range(0, self.__position[0])]
+            [print("#", end="") for k in range(0, self.__size)]
+            if i != self.__size - 1:
+                print("")
+        return ("")
