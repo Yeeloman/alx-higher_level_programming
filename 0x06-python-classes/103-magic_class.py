@@ -8,7 +8,7 @@ import math
 class MagicClass:
     """MagicClass class"""
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """
         Initialize a MagicClass instance.
 
