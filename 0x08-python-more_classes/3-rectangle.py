@@ -61,6 +61,5 @@ class Rectangle:
         """__str__."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        else:
-            rect_width = self.__width * "#" + '\n'
-            return rect_width * self.__height
+        rect_width = self.__width * "#" + '\n'
+        return rect_width * self.__height
