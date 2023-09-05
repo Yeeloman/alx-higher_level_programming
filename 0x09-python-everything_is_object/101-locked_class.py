@@ -2,7 +2,6 @@
 """LockedClass."""
 
 
-class LockedClas:
+class LockedClass:
     """LockedClass."""
     __slots__ = ('first_name')
-    """__slots__"""
