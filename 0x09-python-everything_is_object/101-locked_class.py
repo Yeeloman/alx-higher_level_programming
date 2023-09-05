@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""LockedClas."""
+"""LockedClass."""
 
 
 class LockedClas:
-    """LockedClas."""
+    """LockedClass."""
     __slots__ = ('first_name')
