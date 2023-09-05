@@ -5,3 +5,4 @@
 class LockedClas:
     """LockedClass."""
     __slots__ = ('first_name')
+    """__slots__"""
