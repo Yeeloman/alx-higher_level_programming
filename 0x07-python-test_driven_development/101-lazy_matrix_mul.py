@@ -8,6 +8,7 @@ Module composed by a function that multiplies 2 matrices
 
 import numpy as np
 
+
 def lazy_matrix_mul(m_a, m_b):
     """lazy_matrix_mul.
 
