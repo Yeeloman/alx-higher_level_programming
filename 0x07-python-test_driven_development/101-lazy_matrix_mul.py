@@ -16,4 +16,8 @@ def lazy_matrix_mul(m_a, m_b):
         m_a: matrix a.
         m_b: matrix b.
     """
-    return np.dot(m_a, m_b)
+    try:
+        result = np.dot(m_a, m_b)
+        return result
+    except ValueError:
+        raise ValueError("Matrix shapes are not compatible for multiplication")
