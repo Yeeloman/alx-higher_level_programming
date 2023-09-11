@@ -9,9 +9,7 @@ def add_attribute(obj, attr, value):
     :param attr:
     :param value:
     """
-    if '__dict__' not in dir(obj):
-        raise TypeError("can't add new attr")
-    if '__slots__' in dir(obj):
-        raise TypeError("can't add new attr")
+    if not hasattr(obj, '__dict__') and not hasattr(obj, '__slots__'):
+        raise TypeError("can't add new attribute")
     else:
         setattr(obj, attr, value)
