@@ -3,7 +3,12 @@
 
 
 def add_attribute(obj, attribute, value):
-    """Adds a new attribute"""
+    """add_attribute.
+
+    :param obj:
+    :param attribute:
+    :param value:
+    """
     if '__dict__' not in dir(obj) or '__slots__' in dir(obj):
         raise TypeError("can't add new attribute")
     else:
