@@ -4,7 +4,7 @@
 import sys
 
 
-def print_after_intrp(total_file_size, status_code_counts):
+def print_after_interrupt(total_file_size, status_code_counts):
     """print_after_intrp.
 
     :param total_file_size:
@@ -42,5 +42,5 @@ if __name__ == "__main__":
                         print(f"{code}: {count}")
 
     except KeyboardInterrupt:
-
+        print_after_interrupt(total_file_size, status_code_counts)
         raise
