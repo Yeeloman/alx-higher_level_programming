@@ -13,4 +13,4 @@ if __name__ == "__main__":
 
     args = sys.argv[1:]
     item_list.extend(args)
-    save_to_json_file(args, "add_item.json")
+    save_to_json_file(item_list, "add_item.json")
