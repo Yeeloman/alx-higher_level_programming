@@ -12,7 +12,8 @@ def print_after_interrupt(total_file_size, status_code_counts):
     """
     print(f"File size: {total_file_size}")
     for code, count in sorted(status_code_counts.items()):
-        print("{}: {}".format(code, count))
+        if count > 0:
+            print("{}: {}".format(code, count))
 
 
 if __name__ == "__main__":
