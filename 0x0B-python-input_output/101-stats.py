@@ -26,11 +26,10 @@ if __name__ == "__main__":
                 print(f"File size: {total_file_size}")
                 for code, count in sorted(status_code_counts.items()):
                     if count > 0:
-                        print(f"{code}: {count}")
-
+                        print("{}: {}".format(code, count))
     except KeyboardInterrupt:
         print(f"File size: {total_file_size}")
         for code, count in sorted(status_code_counts.items()):
             if count > 0:
-                print(f"{code}: {count}")
+                print("{}: {}".format(code, count))
         raise
