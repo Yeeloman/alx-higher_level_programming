@@ -35,7 +35,7 @@ if __name__ == "__main__":
 
                 line_count += 1
 
-            if line_count % 10 == 0:
+            if line_count == 10:
                 print(f"File size: {total_file_size}")
                 for code, count in sorted(status_code_counts.items()):
                     if count > 0:
