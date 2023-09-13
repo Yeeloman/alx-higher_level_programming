@@ -3,19 +3,6 @@
 
 import sys
 
-
-def print_after_interrupt(total_file_size, status_code_counts):
-    """print_after_intrp.
-
-    :param total_file_size:
-    :param status_code_counts:
-    """
-    print(f"File size: {total_file_size}")
-    for code, count in sorted(status_code_counts.items()):
-        if count > 0:
-            print("{}: {}".format(code, count))
-
-
 if __name__ == "__main__":
     total_file_size = 0
     status_code_counts = {200: 0, 301: 0, 400: 0,
@@ -35,12 +22,15 @@ if __name__ == "__main__":
 
                 line_count += 1
 
-            if line_count == 10:
+            if line_count % 10 == 0:
                 print(f"File size: {total_file_size}")
                 for code, count in sorted(status_code_counts.items()):
                     if count > 0:
-                        print("{}: {}".format(code, count))
+                        print(f"{code}: {count}")
 
     except KeyboardInterrupt:
-        print_after_interrupt(total_file_size, status_code_counts)
+        print(f"File size: {total_file_size}")
+        for code, count in sorted(status_code_counts.items()):
+            if count > 0:
+                print(f"{code}: {count}")
         raise
