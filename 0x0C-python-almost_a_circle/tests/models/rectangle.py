@@ -4,19 +4,22 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """x.
-
-        :param value:
-        """
+    """Represent a rectangle."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """__init__.
+        """Initialize a new Rectangle.
 
-        :param width:
-        :param height:
-        :param x:
-        :param y:
-        :param id:
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
+            x (int): The x coordinate of the new Rectangle.
+            y (int): The y coordinate of the new Rectangle.
+            id (int): The identity of the new Rectangle.
+        Raises:
+            TypeError: If either of width or height is not an int.
+            ValueError: If either of width or height <= 0.
+            TypeError: If either of x or y is not an int.
+            ValueError: If either of x or y < 0.
         """
         self.width = width
         self.height = height
@@ -33,7 +36,7 @@ class Rectangle(Base):
     def width(self, value):
         """width.
 
-        :param value:
+        :param value: param.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("width must be an integer")
@@ -50,7 +53,7 @@ class Rectangle(Base):
     def height(self, value):
         """heigh.
 
-        :param value:
+        :param value: param.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("height must be an integer")
@@ -67,7 +70,7 @@ class Rectangle(Base):
     def x(self, value):
         """x.
 
-        :param value:
+        :param value: value.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("x must be an integer")
@@ -84,7 +87,7 @@ class Rectangle(Base):
     def y(self, value):
         """y.
 
-        :param value:
+        :param value: param.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("y must be an integer")
@@ -107,10 +110,16 @@ class Rectangle(Base):
         print(rect, end='')
 
     def update(self, *args, **kwargs):
-        """update.
+        """Update the Rectangle.
 
-        :param args:
-        :param kwargs:
+        Args:
+            *args (ints): New attribute values.
+                - 1st argument represents id attribute
+                - 2nd argument represents width attribute
+                - 3rd argument represent height attribute
+                - 4th argument represents x attribute
+                - 5th argument represents y attribute
+            **kwargs (dict): New key/value pairs of attributes.
         """
         if args and len(args) != 0:
             attributes = ['id', 'width', 'height', 'x', 'y']
@@ -132,6 +141,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """__str__."""
-        return f"[Rectangle] ({self.id}) \
-{self.x}/{self.y} - \
-{self.width}/{self.height}"
+        description = "[rectangle] ({}) {} ".format(self.id, self.x)
+        description += "{}/{} ".format(self.y, self.width)
+        description += "{}/{}".format(self.height, self.width)
+        return description1111
