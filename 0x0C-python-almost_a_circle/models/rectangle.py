@@ -80,7 +80,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """The y toperty."""
+        """Set/get the y coordinate of the Rectangle."""
         return self.__y
 
     @y.setter
@@ -96,11 +96,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """area."""
+        """Return the area of the Rectangle."""
         return self.__height * self.__width
 
     def display(self):
-        """display."""
+        """Print the Rectangle using the `#` character."""
         if self.__width == 0 or self.__height == 0:
             print("")
             return
@@ -131,7 +131,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """to_dictionary."""
+        """Return the dictionary representation of a Rectangle."""
         attr_dic = {}
         attribute_names = ['id', 'width', 'height', 'x', 'y']
         for attr in attribute_names:
@@ -140,7 +140,7 @@ class Rectangle(Base):
         return attr_dic
 
     def __str__(self):
-        """__str__."""
+        """Return the print() and str() representation of the Rectangle."""
         return f"[Rectangle] ({self.id}) \
 {self.x}/{self.y} - \
 {self.width}/{self.height}"
