@@ -12,11 +12,11 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """__init__.
 
-        :param width:
-        :param height:
-        :param x:
-        :param y:
-        :param id:
+        :param width: param.
+        :param height: param.
+        :param x: param.
+        :param y: param.
+        :param id: param.
         """
         self.width = width
         self.height = height
@@ -33,7 +33,7 @@ class Rectangle(Base):
     def width(self, value):
         """width.
 
-        :param value:
+        :param value: param.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("width must be an integer")
@@ -50,7 +50,7 @@ class Rectangle(Base):
     def height(self, value):
         """heigh.
 
-        :param value:
+        :param value: param.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("height must be an integer")
@@ -67,7 +67,7 @@ class Rectangle(Base):
     def x(self, value):
         """x.
 
-        :param value:
+        :param value: value.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("x must be an integer")
@@ -84,7 +84,7 @@ class Rectangle(Base):
     def y(self, value):
         """y.
 
-        :param value:
+        :param value: param.
         """
         if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("y must be an integer")
@@ -109,8 +109,8 @@ class Rectangle(Base):
     def update(self, *args, **kwargs):
         """update.
 
-        :param args:
-        :param kwargs:
+        :param args: param.
+        :param kwargs: param.
         """
         if args and len(args) != 0:
             attributes = ['id', 'width', 'height', 'x', 'y']
