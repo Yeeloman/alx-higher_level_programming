@@ -141,7 +141,6 @@ class Rectangle(Base):
 
     def __str__(self):
         """__str__."""
-        description = "[rectangle] ({}) {} ".format(self.id, self.x)
-        description += "{}/{} ".format(self.y, self.width)
-        description += "{}/{}".format(self.height, self.width)
-        return description1111
+        return f"[Rectangle] ({self.id}) \
+{self.x}/{self.y} - \
+{self.width}/{self.height}"
