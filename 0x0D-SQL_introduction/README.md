@@ -6,6 +6,7 @@ The following project focuses on SQL, it works as an introduction.
 
   * [MySQL](https://www.mysql.com/fr/)
     * Install MySQL:
+
     ```
     $ sudo apt update
     $ sudo apt install mysql-server
@@ -15,8 +16,9 @@ The following project focuses on SQL, it works as an introduction.
     $
     ```
     * Connect to mysql server:
+
     ```
-      ~>  sql 
+    >_ sudo mysql
     Enter password:
     Welcome to the MariaDB monitor.  Commands end with ; or \g.
     Your MariaDB connection id is 19
@@ -31,7 +33,7 @@ The following project focuses on SQL, it works as an introduction.
 ## Usage:
 
 all the scripts can be used as the following example:
-```  ~>  cat 0-list_databases.sql | mysql -hlocalhost -uroot -p```
+```>_ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p```
 
 ## Tasks:
 
