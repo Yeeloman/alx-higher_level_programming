@@ -76,12 +76,32 @@ all the scripts can be used as the following example:
     * a script that lists all records of the table `second_table` of the database `hbtn_0c_0` in your MySQL server.
     * File: [10-top_score.sql](./10-top_score.sql)
   * task 11:
+    * a script that lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0 in your MySQL server.
+    * File: [11-best_score.sql](./11-best_score.sql)
   * task 12:
+    * a script that updates the score of Bob to 10 in the table second_table.
+    * File: [12-no_cheating.sql](./12-no_cheating.sql)
   * task 13:
+    * a script that removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0 in your MySQL server.
+    * File: [13-change_class.sql](./13-change_class.sql)
   * task 14:
+    * a script that computes the score average of all records in the table second_table of the database hbtn_0c_0 in your MySQL server.
+    * File: [14-average.sql](./14-average.sql)
   * task 15:
+    * a script that lists the number of records with the same score in the table second_table of the database hbtn_0c_0 in your MySQL server.
+    * File: [15-groups.sql](./15-groups.sql)
   * task 16:
+    * a script that lists all records of the table second_table of the database hbtn_0c_0 in your MySQL server.
+    * File: [16-no_link.sql](./16-no_link.sql)
   * task 17:
+    * a script that converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.
+    * File: [100-move_to_utf8.sql](./100-move_to_utf8.sql)
   * task 18:
+    * a script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
+    * File: [101-avg_temperatures.sql](./101-avg_temperatures.sql)
   * task 19:
+    * a script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)
+    * File: [102-top_city.sql](./102-top_city.sql)
   * task 20:
+    * a script that displays the max temperature of each state (ordered by State name).
+    * File: [103-max_state.sql](./103-max_state.sql)
