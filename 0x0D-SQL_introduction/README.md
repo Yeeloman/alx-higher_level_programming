@@ -7,6 +7,7 @@ The following project focuses on SQL, it works as an introduction.
   * [MySQL](https://www.mysql.com/fr/)
     * Install MySQL:
 
+
     ```
     >_ sudo apt update
     >_ sudo apt install mysql-server
@@ -16,6 +17,7 @@ The following project focuses on SQL, it works as an introduction.
     >_
     ```
     * Connect to mysql server:
+
 
     ```
     >_ sudo mysql
@@ -33,7 +35,10 @@ The following project focuses on SQL, it works as an introduction.
 ## Usage:
 
 all the scripts can be used as the following example:
-```>_ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p```
+
+```
+>_ cat 0-list_databases.sql | mysql -hlocalhost -uroot -p
+```
 
 ## Tasks:
 
