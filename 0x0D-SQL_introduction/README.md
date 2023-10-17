@@ -8,12 +8,12 @@ The following project focuses on SQL, it works as an introduction.
     * Install MySQL:
 
     ```
-    $ sudo apt update
-    $ sudo apt install mysql-server
+    >_ sudo apt update
+    >_ sudo apt install mysql-server
     ...
-    $ mysql --version
+    >_ mysql --version
     mysql  Ver 8.0.25-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))
-    $
+    >_
     ```
     * Connect to mysql server:
 
