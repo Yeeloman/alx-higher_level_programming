@@ -1,6 +1,7 @@
 -- a script that lists all shows from hbtn_0d_tvshows_rate by their rating.
-SELECT `name`, SUM(`tv_show_ratings`.`rate`) AS 'rating' FROM `tv_genres`
-	INNER JOIN `tv_show_genres` ON `tv_genres`.`id` = `tv_show_genres`.`genre_id`
-	INNER JOIN `tv_show_ratings` ON `tv_show_genres`.`show_id` = `tv_show_ratings`.`show_id`
-	GROUP BY `name`
-	ORDER BY `rating` DESC;
+SELECT t.title, IFNULL(SUM(r.rate), 0) AS rating
+FROM tv_shows AS t
+LEFT JOIN tv_show_ratings AS r
+ON t.id = r.show_id
+GROUP BY t.title
+ORDER BY rating DESC;
