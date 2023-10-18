@@ -1,0 +1,10 @@
+-- a script that lists all genres in the database hbtn_0d_tvshows_rate by their rating.
+SELECT `name`, SUM(`rate`) AS `rating`
+  FROM `tv_genres` AS tg
+       INNER JOIN `tv_show_genres` AS tsg
+       ON s.`genre_id` = tg.`id`
+
+       INNER JOIN `tv_show_ratings` AS trv
+       ON trv.`show_id` = tsg.`show_id`
+ GROUP BY `name`
+ ORDER BY `rating` DESC;
