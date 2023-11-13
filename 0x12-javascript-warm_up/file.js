@@ -1,3 +1,15 @@
 #!/usr/bin/node
-const add = require('./13-add').add;
-console.log(add(3, 5));
+const myObject = {
+  type: 'object',
+  value: 12
+};
+console.log(myObject);
+/*
+YOUR CODE HERE
+*/
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
+myObject.incr();
+console.log(myObject);
