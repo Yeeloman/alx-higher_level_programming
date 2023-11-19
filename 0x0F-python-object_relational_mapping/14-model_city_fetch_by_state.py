@@ -18,10 +18,10 @@ if __name__ == "__main__":
         3306/{}'.format(usrname, passwd, db_name))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    with Session() as session:
-        for instance in (session.query(
-            State.name,
-            City.id,
-            City.name
-        ).filter(State.id == City.state_id)):
-            print(f"{instance[0]}: {str(instance[1])} {instance[2]}")
+    session = Session()
+    for instance in (session.query(
+        State.name,
+        City.id,
+        City.name
+    ).filter(State.id == City.state_id)):
+        print(f"{instance[0]}: {str(instance[1])} {instance[2]}")
