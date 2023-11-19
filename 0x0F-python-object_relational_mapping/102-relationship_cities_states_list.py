@@ -17,9 +17,9 @@ if __name__ == "__main__":
         3306/{}'.format(usrname, passwd, db_name))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
-    with Session() as session:
-        for instance in session.query(State).order_by(State.id):
-            print(instance.id, instance.name, sep=": ")
-            for city_ins in instance.cities:
-                print("    ", end="")
-                print(city_ins.id, city_ins.name, sep=": ")
+    session = Session()
+    for instance in session.query(State).order_by(State.id):
+        print(instance.id, instance.name, sep=": ")
+        for city_ins in instance.cities:
+            print("    ", end="")
+            print(city_ins.id, city_ins.name, sep=": ")
