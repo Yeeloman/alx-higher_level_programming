@@ -24,4 +24,4 @@ if __name__ == "__main__":
         City.id,
         City.name
     ).filter(State.id == City.state_id)):
-        print(instance[0] + ": (" + str(instance[1]) + ") " + instance[2])
+        print(f"{instance[0]}: ({str(instance[1])}) {instance[2]}")
