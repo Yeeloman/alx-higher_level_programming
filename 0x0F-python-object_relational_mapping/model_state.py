@@ -7,8 +7,8 @@ an instance of declarative_base()
 from sqlalchemy import MetaData, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
-metadata = MetaData()
-Base = declarative_base(metadata)
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
 
 
 class State(Base):
