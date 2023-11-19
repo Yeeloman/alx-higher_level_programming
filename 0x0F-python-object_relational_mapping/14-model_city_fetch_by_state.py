@@ -3,7 +3,6 @@
 
 from model_state import Base, State
 from sqlalchemy import (create_engine)
-from sqlalchemy import update
 from sqlalchemy.orm import sessionmaker
 from model_city import City
 import sys
@@ -14,8 +13,11 @@ if __name__ == "__main__":
     passwd = sys.argv[2]
     db_name = sys.argv[3]
     engine = create_engine(
-        'mysql+mysqldb://{}:{}@localhost:\
-        3306/{}'.format(usrname, passwd, db_name))
+        'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
+            usrname,
+            passwd,
+            db_name
+        ))
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
@@ -24,4 +26,4 @@ if __name__ == "__main__":
         City.id,
         City.name
     ).filter(State.id == City.state_id)):
-        print(instance[0] + ": (" + str(instance[1]) + ") " + instance[2])
+        print(f"{instance[0]}: ({str(instance[1])}) {instance[2]}")
