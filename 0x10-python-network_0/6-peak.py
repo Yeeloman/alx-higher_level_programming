@@ -9,6 +9,5 @@ def find_peak(list_of_integers):
     """
     if not list_of_integers:
         return None
-    peak_index = max(enumerate(list_of_integers), key=lambda x: x[1])[0]
-    peak_value = list_of_integers[peak_index]
-    return peak_value
+    list_of_integers.sort()
+    return list_of_integers[-1]
