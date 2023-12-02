@@ -19,4 +19,4 @@ if __name__ == "__main__":
     req = urlreq.Request(url, data=encoded_data)
     with urlreq.urlopen(req) as resp:
         cont = resp.read().decode('utf-8')
-        print(f"Your email is: {cont}")
+        print(f"{cont}")
