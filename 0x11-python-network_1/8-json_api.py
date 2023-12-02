@@ -12,7 +12,6 @@ if __name__ == "__main__":
     json_data = {"q": letter}
     try:
         resp = reqs.post(url, data=json_data)
-        resp.raise_for_status()
         js_data = resp.json()
         if js_data == {}:
             print("No result")
