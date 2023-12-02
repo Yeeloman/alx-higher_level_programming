@@ -8,5 +8,5 @@ if __name__ == "__main__":
     url = 'https://alx-intranet.hbtn.io/status'
     resp = reqs.get(url)
     print("Body response:")
-    print("    - type:", type(resp.text))
-    print("    - content:", resp.text)
+    print("\t- type:", type(resp.text))
+    print("\t- content:", resp.text)
