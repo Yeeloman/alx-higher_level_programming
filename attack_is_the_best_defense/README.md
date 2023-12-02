@@ -46,5 +46,5 @@ Password-based authentication systems are vulnerable to dictionary attacks. Let'
 * As the Docker container is running locally, Hydra should access the SSH account via IP `127.0.0.1` and port `2222`.
 * Hint: The password is 11 characters long.
 
-**Source:**
+**Source :**
 [Project Repository](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/264/user_authenticating_into_server)
